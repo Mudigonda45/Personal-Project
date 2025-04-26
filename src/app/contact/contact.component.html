@@ -1,0 +1,31 @@
+<div class="contact-container">
+  <div class="contact-info">
+    <h2>Contact Info  : </h2><hr>
+    <p>Always available for freelance work if the right project comes along. Feel free to contact me!</p>
+    
+    <h3>Address : </h3><hr>
+    <p>Lambadi colony 5th Line,Bhadrachalam,<br>Bhadradri Kothagudem,<br>  Telangana,507111.</p>
+    <hr>
+    <h3>Phone No:  +91 7013016332</h3><hr>
+    <h3>Email Address  : <a href="mailto:2001mohansai@gmail.com">2001mohansai</a></h3><hr>
+   
+    <h3>Location : </h3> 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2965.039792285445!2d80.90246137383639!3d17.669713394613193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQwJzExLjAiTiA4MMKwNTQnMTguMSJF!5e1!3m2!1sen!2sin!4v1737885726221!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <div class="contact-form">
+    <h4> <b>Get in Touch</b></h4>
+    <form (ngSubmit)="submitForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" [(ngModel)]="message" name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>

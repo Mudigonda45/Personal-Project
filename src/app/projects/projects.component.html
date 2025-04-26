@@ -1,0 +1,10 @@
+<h2>Projects</h2>
+<div class="grid-container">
+  <div class="grid-item" *ngFor="let project of projects">
+    <h3>{{ project.title }}</h3>
+    <img [src]="project.gifUrl" alt="{{ project.title }}" />
+    <div class="link-container">
+      <a [href]="project.link" target="_blank">View Project</a>
+    </div>
+  </div>
+</div>

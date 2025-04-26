@@ -1,0 +1,72 @@
+h2 {
+  text-align: center;
+}
+
+.skills-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  font-weight: bold;
+}
+
+.skill-bar {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative; /* Positioning context for wave */
+}
+
+.skill-percentage {
+  height: 20px;
+  background-color: #4caf50; /* Green color */
+  width: 0; /* Start with width of 0 for animation */
+  transition: width 1s ease-in-out; /* Animation for width change */
+}
+
+/* Keyframes for flowing effect */
+@keyframes flow {
+  from {
+    width: 0; /* Start from width of 0 */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    opacity: 1; /* Fully visible */
+    /* Width will be set dynamically by Angular */
+  }
+}
+
+/* Apply animation when the skill percentage is set */
+.skill-percentage.flowing {
+  animation: flow 1s ease-in-out forwards; /* Use the flow animation */
+}
+
+/* Wave effect inside the skill bar */
+.wave {
+  position: absolute;
+  height: 20px; /* Match height of skill-percentage */
+  background-color: rgba(255, 255, 255, 0.5); /* Light wave color */
+  opacity: 0.5; /* Slightly transparent for effect */
+}
+
+@keyframes waveAnimation {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    } 
+}
+
+.wave-animation {
+    animation: waveAnimation 2s linear infinite; /* Infinite wave animation */
+}
+
+.percentage-label {
+    text-align: right;
+}

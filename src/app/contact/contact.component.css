@@ -1,0 +1,90 @@
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-info {
+    flex: 1; /* Takes up one part of the space */
+    margin-right: 20px; /* Space between info and form */
+    font-family: 'Courier New', Courier, monospace;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  }
+  
+  .contact-form {
+    flex: 1; /* Takes up one part of the space */
+    background-color: #333; /* Dark background for the form */
+    color: white; /* White text color */
+    padding: 20px; /* Padding inside the form */
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  h2, h3 {
+    color: #0a0a0a; /* White color for headings */
+    font-family: 'Courier New', Courier, monospace;
+    
+  }
+ h4{
+    color: rgb(235, 225, 225);
+    font-family: "Courier New";
+    text-align: center;
+   
+ }
+  h1{
+    font-family: "Audiowide";
+    height: 50px;
+  } 
+  form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow form to grow and fill available space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  label {
+    margin-top: 10px; /* Space above labels */
+  }
+  
+  input, textarea {
+    padding: 10px;
+    margin-top: 5px; /* Space above inputs */
+    border-radius: 4px; /* Rounded corners for inputs */
+    border: none; /* Remove default border */
+  }
+  
+  input {
+    background-color: #444; /* Darker background for input fields */
+    color: white; /* White text color */
+  }
+  
+  textarea {
+    background-color: #444; /* Darker background for textarea */
+    color: white; /* White text color */
+    height: calc(100% - 75px); /* Adjust height based on other elements' height */
+  }
+  
+  button {
+    margin-top: auto; /* Push button to the bottom of the form */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners for button */
+    border: none; /* Remove default border */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  button:hover {
+     background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  button[disabled] {
+     background-color: #555; /* Grey out button when disabled */
+     cursor: not-allowed;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  

@@ -1,0 +1,13 @@
+<div class="education-container">
+    <h2>Education Details</h2>
+    <div class="grid-container">
+      <div class="grid-header">Institution</div>
+      <div class="grid-header">Degree</div>
+      <div class="grid-header">Year</div>
+  
+      <div *ngFor="let edu of educationDetails" class="grid-item">{{ edu.institution }}</div>
+      <div *ngFor="let edu of educationDetails" class="grid-item">{{ edu.degree }}</div>
+      <div *ngFor="let edu of educationDetails" class="grid-item">{{ edu.year }}</div>
+    </div>
+  </div>
+  

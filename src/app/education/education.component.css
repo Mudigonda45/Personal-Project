@@ -1,0 +1,23 @@
+.education-container {
+    padding: 20px;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 15px; /* Space between grid items */
+  }
+  
+  .grid-header {
+    font-weight: bold;
+    background-color: #007bff; /* Header background color */
+    color: white; /* Header text color */
+    padding: 10px; /* Padding for headers */
+  }
+  
+  .grid-item {
+    background-color: #f8f9fa; /* Light background for items */
+    padding: 10px; /* Padding for items */
+    border-radius: 5px; /* Rounded corners */
+  }
+  

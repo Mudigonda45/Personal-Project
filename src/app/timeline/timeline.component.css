@@ -1,0 +1,79 @@
+.timeline {
+    position: relative;
+    background-color: #082745;
+    color: #fff;
+    padding: 15px; /* Reduced padding */
+    border-radius: 10px;
+    max-width: 700px; /* Reduced the overall width */
+    margin-bottom: 15px; /* Reduced margin between timeline blocks */
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  .timeline h2 {
+    text-align: center;
+    font-size: 1.5em; /* Reduced font size */
+    margin-bottom: 15px; /* Reduced bottom margin */
+  }
+  
+  .timeline-container {
+    display: flex;
+    position: relative;
+    margin-bottom: 15px; /* Reduced spacing between items */
+    justify-content: flex-start;
+  }
+  
+  .timeline-container.left {
+    justify-content: flex-start; /* Align to the left */
+  }
+  
+  .timeline-container.right {
+    justify-content: flex-end; /* Align to the right */
+  }
+  
+  .timeline-content {
+    background: #112d4e;
+    padding: 15px; /* Reduced padding for content boxes */
+    border-radius: 10px;
+    width: 200px; /* Reduced width of the boxes */
+  }
+  
+  .check-circle {
+    width: 40px; /* Reduced circle size */
+    height: 40px;
+    background: #00ff88;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em; /* Reduced font size for the checkmark */
+    color: #fff;
+    position: relative;
+  }
+  
+  .timeline-container.left .check-circle {
+    margin-right: 15px; /* Adjusted spacing between check and content for left */
+  }
+  
+  .timeline-container.right .check-circle {
+    margin-left: 15px; /* Adjusted spacing between check and content for right */
+  }
+  
+  .timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 3px; /* Reduced line thickness */
+    background: #00ff88;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-container:last-child::after {
+    bottom: 50%; /* Stops the last line at halfway */
+  }
+  

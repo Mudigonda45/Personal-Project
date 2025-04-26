@@ -1,0 +1,18 @@
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.contact-info,
+.message-me {
+  width: 48%; /* Ensure the sections are spaced correctly */
+}
+
+iframe {
+  max-width: 100%; /* Ensure Google Maps iframe is responsive */
+}

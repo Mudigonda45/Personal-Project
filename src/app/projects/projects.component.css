@@ -1,0 +1,35 @@
+h2 {
+    text-align:center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+  gap: 20px; /* Space between columns */
+}
+
+.grid-item {
+  background-color: #fff; /* Background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  padding: 20px; /* Increased padding for larger items */
+  border-radius: 8px; /* Rounded corners */
+  min-height: 200
+  x; /* Minimum height for each grid item */
+}
+
+.grid-item img {
+  width: 100%; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.link-container {
+  text-align: center; /* Center the link */
+}
+
+.link-container a {
+  text-decoration: none; /* Remove underline */
+  color: #007bff; /* Link color */
+}
+
+.link-container a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
