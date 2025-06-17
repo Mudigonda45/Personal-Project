@@ -12,13 +12,23 @@ import { HeroComponent } from "./hero/hero.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { ContactComponent } from "./contact/contact.component";
 import { HomeComponent } from "./home/home.component";
+import { CalendarModule } from 'primeng/calendar';
+import { FormsModule } from '@angular/forms'; 
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FooterComponent, SkillsComponent, ProjectsComponent, TimelineComponent, NavbarComponent, ContactComponent],
+  imports: [CommonModule,FormsModule,CalendarModule,RouterOutlet, FooterComponent, SkillsComponent, ProjectsComponent, TimelineComponent, NavbarComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'portfolio-website';                                                                                            
+  title = 'portfolio-website';    
+  selectedDate: Date | null = null;
+  dateFormat: string = 'dd/mm/yy';     
+  
+  onRefresh() {
+  this.selectedDate = null; // Clear selected date
+}
 }

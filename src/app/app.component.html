@@ -31,6 +31,39 @@
   <marquee behavior="scroll" direction="left" scrollamount="20">Fast...</marquee>
   <hr>
   <br>
+  <br>
+  <br>
+  <br>
+  <br><br>
+
+<!--   <p-calendar [(ngModel)]="selectedDate" view="date" [showIcon]="true"
+            [dateFormat]="dateFormat"
+            [yearNavigator]="true" [monthNavigator]="true" yearRange="1990:2030">
+</p-calendar>
+
+<p> {{ selectedDate | date:'fullDate' }}</p> -->
+<div class="calendar-box">
+  <p-calendar [(ngModel)]="selectedDate"
+              view="date"
+              [showIcon]="true"
+              [dateFormat]="dateFormat"
+              [yearNavigator]="true"
+              [monthNavigator]="true"
+              yearRange="1990:2030">
+  </p-calendar>
+
+  <button class="icon-button" (click)="onRefresh()">
+    <i class="pi pi-refresh"></i>
+  </button>
+</div>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
  <app-contact></app-contact>
  <hr>
 
