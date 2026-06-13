@@ -1,25 +1,105 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #112d4e;
-    color: white;
-    font-size: 1.2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 clamp(24px, 7vw, 108px);
+  box-sizing: border-box;
+
+  background: rgba(8, 27, 41, 0.95);
+  backdrop-filter: blur(10px);
+
+  z-index: 1000;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00d9ff, #00ff9d);
+  color: #071827;
+  font-size: 0.84rem;
+  font-weight: 900;
+  box-shadow: 0 8px 22px rgba(0, 217, 255, 0.28);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 1.7vw, 26px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.nav-links a:hover {
+  color: #00d9ff;
+}
+
+.nav-links a.active-link {
+  color: #00d9ff;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    min-height: 70px;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 16px 20px;
   }
-  
-  .nav-left {
-    font-weight: bold;
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 12px;
   }
-  
-  .nav-right a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 28px;
   }
-  
-  .nav-right a:hover {
-    color: #00ff88;
+
+  .nav-links {
+    gap: 14px;
   }
-  
+
+  .nav-links a {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo span:last-child {
+    display: none;
+  }
+}

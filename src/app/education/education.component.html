@@ -1,13 +1,20 @@
-<div class="education-container">
-    <h2>Education Details</h2>
-    <div class="grid-container">
-      <div class="grid-header">Institution</div>
-      <div class="grid-header">Degree</div>
-      <div class="grid-header">Year</div>
-  
-      <div *ngFor="let edu of educationDetails" class="grid-item">{{ edu.institution }}</div>
-      <div *ngFor="let edu of educationDetails" class="grid-item">{{ edu.degree }}</div>
-      <div *ngFor="let edu of educationDetails" class="grid-item">{{ edu.year }}</div>
+<section class="education-section">
+  <div class="education-shell">
+    <h2>Education</h2>
+
+    <div class="education-timeline">
+      <article class="timeline-item" *ngFor="let edu of educationDetails">
+        <div class="timeline-card">
+          <h3>{{ edu.degree }}</h3>
+          <p>{{ edu.highlight }}</p>
+          <strong>{{ edu.institution }}</strong>
+          <span>{{ edu.year }}</span>
+        </div>
+
+        <div class="timeline-dot">
+          <i class="fa-solid fa-check" aria-hidden="true"></i>
+        </div>
+      </article>
     </div>
   </div>
-  
+</section>

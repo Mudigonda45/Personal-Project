@@ -1,10 +1,43 @@
-<h2>Projects</h2>
-<div class="grid-container">
-  <div class="grid-item" *ngFor="let project of projects">
-    <h3>{{ project.title }}</h3>
-    <img [src]="project.gifUrl" alt="{{ project.title }}" />
-    <div class="link-container">
-      <a [href]="project.link" target="_blank">View Project</a>
+<section class="projects-section">
+  <div class="projects-shell">
+    <div class="section-heading">
+      <span>Selected Work</span>
+      <h2>Projects</h2>
+      <p>Real-world applications built across Angular, Spring Boot, MySQL, microservices, deployment, and responsive frontend development.</p>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card" *ngFor="let project of projects" [class.featured]="project.featured">
+        <div class="project-top">
+          <div class="project-icon">
+            <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+          </div>
+
+          <span class="project-type">{{ project.type }}</span>
+        </div>
+
+        <h3>{{ project.title }}</h3>
+
+        <div class="tech-stack">
+          <span *ngFor="let tech of project.stack">{{ tech }}</span>
+        </div>
+
+        <ul>
+          <li *ngFor="let item of project.description">{{ item }}</li>
+        </ul>
+
+        <div class="project-actions" *ngIf="project.liveUrl || project.githubUrl">
+          <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            Live Website
+          </a>
+
+          <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            {{ project.githubLabel }}
+          </a>
+        </div>
+      </article>
     </div>
   </div>
-</div>
+</section>

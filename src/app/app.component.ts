@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { AboutMeComponent } from "./about-me/about-me.component";
 import { SkillsComponent } from "./skills/skills.component";
 import { ProjectsComponent } from "./projects/projects.component";
-import { HeaderComponent } from "./header/header.component";
-import { EducationComponent } from "./education/education.component";
 import { FooterComponent } from "./footer/footer.component";
+import { EducationComponent } from "./education/education.component";
 
 import { TimelineComponent } from "./timeline/timeline.component";
-import { HeroComponent } from "./hero/hero.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { ContactComponent } from "./contact/contact.component";
 import { HomeComponent } from "./home/home.component";
@@ -19,7 +16,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule,FormsModule,CalendarModule,RouterOutlet, FooterComponent, SkillsComponent, ProjectsComponent, TimelineComponent, NavbarComponent, ContactComponent],
+  imports: [CommonModule, FormsModule, CalendarModule, FooterComponent, SkillsComponent, ProjectsComponent, TimelineComponent, NavbarComponent, ContactComponent, HomeComponent, AboutMeComponent, EducationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

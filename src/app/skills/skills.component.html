@@ -1,16 +1,36 @@
-<div class="Body">
-  <h2>Skills Me</h2>
-  
-  <div class="skills-container">
-      <div *ngFor="let skill of skills" class="skill"> 
-          <div class="skill-name">{{ skill.name }}</div>
-          <div class="skill-bar">
-              <div class="skill-percentage" [style.width.%]="skill.percentage">
-                  <div class="wave wave-animation"></div> <!-- Wave element -->
-              </div>
+<section class="skills-section">
+  <div class="skills-background" aria-hidden="true"></div>
+
+  <div class="skills-shell">
+    <div class="section-heading">
+      <span>Technical Toolkit</span>
+      <h2>Skills & Expertise</h2>
+      <p>Modern full stack development with Java, Spring Boot, Angular, testing, DevOps, and cloud fundamentals.</p>
+    </div>
+
+    <div class="skills-grid">
+      <article class="skill-card" *ngFor="let group of skillGroups">
+        <div class="card-heading">
+          <div class="icon-box">
+            <i [class]="group.icon" aria-hidden="true"></i>
           </div>
-          <div class="percentage-label">{{ skill.percentage }}%</div>
-      </div>
+
+          <h3>{{ group.title }}</h3>
+        </div>
+
+        <div class="skill-list">
+          <div class="skill-row" *ngFor="let skill of group.skills">
+            <div class="skill-meta">
+              <span>{{ skill.name }}</span>
+              <strong>{{ skill.percentage }}%</strong>
+            </div>
+
+            <div class="skill-track" aria-hidden="true">
+              <div class="skill-fill" [style.width.%]="skill.percentage"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
-  </div>
-  
+</section>

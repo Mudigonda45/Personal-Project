@@ -1,6 +1,8 @@
 import { Component, AfterViewInit } from '@angular/core';
-import particlesJS from 'particles.js'; 
 
+declare const particlesJS: {
+  load: (tagId: string, pathConfigJson: string, callback?: () => void) => void;
+};
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,10 @@ import particlesJS from 'particles.js';
 export class HomeComponent implements AfterViewInit {
   
   ngAfterViewInit() {
-    // Initialize particles.js with configuration
+    if (typeof particlesJS === 'undefined') {
+      return;
+    }
+
     particlesJS.load('particles-js', 'assets/particles.json', () => {
       console.log('Particles.js config loaded successfully');
     });
