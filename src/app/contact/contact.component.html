@@ -1,31 +1,94 @@
-<div class="contact-container">
-  <div class="contact-info">
-    <h2>Contact Info  : </h2><hr>
-    <p>Always available for freelance work if the right project comes along. Feel free to contact me!</p>
-    
-    <h3>Address : </h3><hr>
-    <p>Lambadi colony 5th Line,Bhadrachalam,<br>Bhadradri Kothagudem,<br>  Telangana,507111.</p>
-    <hr>
-    <h3>Phone No:  +91 7013016332</h3><hr>
-    <h3>Email Address  : <a href="mailto:2001mohansai@gmail.com">2001mohansai</a></h3><hr>
-   
-    <h3>Location : </h3> 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2965.039792285445!2d80.90246137383639!3d17.669713394613193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQwJzExLjAiTiA4MMKwNTQnMTguMSJF!5e1!3m2!1sen!2sin!4v1737885726221!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<section class="contact-section">
+  <div class="section-header">
+    <div>
+      <span>Let's Connect</span>
+      <h2>Ready to start your next project? Let’s discuss how we can work together</h2>
+      <p>I'm currently available for new projects and collaborations. Send a message and let's turn your ideas into reality.</p>
+    </div>
   </div>
 
-  <div class="contact-form">
-    <h4> <b>Get in Touch</b></h4>
-    <form (ngSubmit)="submitForm()">
-      <label for="name">Name:</label>
-      <input type="text" id="name" [(ngModel)]="name" name="name" required>
+  <div class="contact-grid">
+    <div class="contact-panel">
+      <div class="panel-card">
+        <div class="panel-title">
+          <h3>Let's Connect</h3>
+        </div>
+        <div class="contact-item">
+          <span class="icon"><i class="fas fa-envelope"></i></span>
+          <div>
+            <p class="item-label">Email</p>
+            <a href="mailto:mudigondamohansai&#64;gmail.com">mudigondamohansai&#64;gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="icon"><i class="fas fa-phone-alt"></i></span>
+          <div>
+            <p class="item-label">Phone</p>
+            <a href="tel:+917013016332">+91 7013016332</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+          <div>
+            <p class="item-label">Location</p>
+            <p>Hyderabad, India</p>
+          </div>
+        </div>
+      </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" [(ngModel)]="email" name="email" required>
+      <div class="panel-card follow-card">
+        <p class="follow-label">Follow Me</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/mohan-sai-mudigonda/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://x.com/Mohan_sai0045?t=empaLw2p11FXp0IMJ9agig&s=08" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/Mudigonda45" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://vsco.co/mohansaimudigonda/gallery" target="_blank" rel="noopener noreferrer" aria-label="Photography"><i class="fas fa-camera-retro"></i></a>
+          <a href="https://www.instagram.com/mohan_sai_mudigonda/?r=nametag" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
 
-      <label for="message">Message:</label>
-      <textarea id="message" [(ngModel)]="message" name="message" required></textarea>
+      <div class="panel-card availability-card">
+        <p class="availability-title">Current Availability</p>
+        <p>I'm currently available for new projects and collaborations. Let's discuss your ideas and bring them to life!</p>
+      </div>
+    </div>
 
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="contact-form-panel">
+      <div class="form-header">
+        <span>Send Message</span>
+        <h3>Send Message</h3>
+      </div>
+      <form (ngSubmit)="submitForm()" class="contact-form">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" [(ngModel)]="name" name="name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" [(ngModel)]="email" name="email" required />
+        </div>
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" [(ngModel)]="subject" name="subject" placeholder="Project inquiry" />
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" [(ngModel)]="message" name="message" required></textarea>
+        </div>
+        <div class="form-status">
+          <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+          <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+          <p class="error" *ngIf="gmailScopeError">
+            If you manage this EmailJS account, reconfigure Gmail scopes or follow the guide:
+            <a target="_blank" rel="noreferrer noopener" [href]="emailDocsLink">EmailJS Gmail setup</a>
+          </p>
+          <p *ngIf="gmailScopeError">
+            Or open your mail client to send manually:
+            <button type="button" class="mailto-btn" (click)="openMailClient()">Open Mail Client</button>
+          </p>
+        </div>
+        <button type="submit" [disabled]="loading">{{ loading ? 'Sending...' : 'Send Message' }}</button>
+      </form>
+    </div>
   </div>
-</div>
+</section>

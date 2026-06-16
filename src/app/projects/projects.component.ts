@@ -42,6 +42,8 @@ export class ProjectsComponent {
       title: 'Car Rental Booking System',
       type: 'Full Stack Application',
       stack: ['Angular', 'Spring Boot', 'MySQL'],
+      githubUrl: 'https://github.com/Mudigonda45?tab=repositories',
+      githubLabel: 'Project Repository',
       description: [
         'Developed a full-stack application for car rental booking with responsive UI.',
         'Built REST APIs using Spring Boot and integrated them with the Angular frontend.',
@@ -53,6 +55,8 @@ export class ProjectsComponent {
       title: 'Quiz Management System',
       type: 'Backend Microservices',
       stack: ['Spring Boot', 'Microservices', 'MySQL', 'Eureka Server', 'API Gateway'],
+      githubUrl: 'https://github.com/Mudigonda45?tab=repositories',
+      githubLabel: 'Project Repository',
       description: [
         'Developed a scalable backend system to manage quizzes, questions, and user responses using Spring Boot.',
         'Designed RESTful APIs for quiz creation, dynamic question retrieval, and automated score calculation.',
@@ -68,6 +72,9 @@ export class ProjectsComponent {
       title: 'College Website',
       type: 'Live Demo',
       stack: ['HTML', 'CSS', 'JavaScript'],
+      liveUrl: 'https://mudigonda45.github.io/college-website/',
+      githubUrl: 'https://github.com/Mudigonda45?tab=repositories',
+      githubLabel: 'Project Repository',
       description: [
         'Developed a responsive college website with structured UI/UX design.',
         'Created clean page sections and mobile-friendly layouts for a consistent browsing experience.'

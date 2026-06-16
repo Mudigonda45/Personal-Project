@@ -1,0 +1,15 @@
+<section class="services-section">
+  <div class="services-intro">
+    <span>Services</span>
+    <h2>What I can help you build</h2>
+    <p>End-to-end software delivery, from UI to backend services, cloud deployment, and ongoing product support.</p>
+  </div>
+
+  <div class="services-grid">
+    <article class="service-card" *ngFor="let service of services">
+      <div class="service-icon"><i [class]="service.icon"></i></div>
+      <h3>{{ service.title }}</h3>
+      <p>{{ service.description }}</p>
+    </article>
+  </div>
+</section>
